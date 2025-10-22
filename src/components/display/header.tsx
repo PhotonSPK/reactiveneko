@@ -197,8 +197,10 @@ export const Header = ({
     profileTitle,
     profilePicture,
 }: PropsWithChildren<{
-    background?: string
-    profileName: ReactNode
+    background?: string,
+    favicon: string,
+    profileName: ReactNode,
+    profileTitle: string,
     profilePicture: ProfilePictureSources
 }>) => (
     <header className="header row">
