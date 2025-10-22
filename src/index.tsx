@@ -12,7 +12,9 @@ import {
     COPYRIGHT,
     DESCRIPTION_PARAGRAPHS,
     PANEL_BACKGROUND,
+    FAVICON,
     PROFILE_NAME,
+    PROFILE_TITLE,
     PROFILE_PICTURE,
     PROFILE_TAGS,
 } from './config.tsx'
@@ -62,7 +64,7 @@ function ProfileLabel({ children, comment, icon }: { children: string; comment?:
 export const IndexPage = () => {
     return (
         <div className="container">
-            <Header background={PANEL_BACKGROUND} profilePicture={PROFILE_PICTURE} profileName={PROFILE_NAME}>
+            <Header background={PANEL_BACKGROUND} favicon={FAVICON} profilePicture={PROFILE_PICTURE} profileName={PROFILE_NAME} profileTitle={PROFILE_TITLE}>
                 <ProfileAddons>
                     {PROFILE_TAGS.map(({ tags, title }) => (
                         <ProfileAddonGroup key={title} title={title}>

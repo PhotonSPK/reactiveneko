@@ -1,18 +1,17 @@
 import {
     TbBrandGithub,
     TbBrandSteam,
-    TbBrandTelegram,
     TbBrandTwitter,
-    TbBrandWeibo,
-    TbCookie,
-    TbNetwork,
+    TbCpu,
     TbSourceCode,
 } from 'react-icons/tb'
-import ProfilePictureOriginal from './assets/images/amphineko.png'
-import ProfilePictureAvif from './assets/images/amphineko.png?format=avif'
-import ProfilePictureJpeg from './assets/images/amphineko.png?format=jpeg'
-import ProfilePicturePng from './assets/images/amphineko.png?format=png'
-import ProfilePictureWebp from './assets/images/amphineko.png?format=webp'
+import { SiVrchat } from 'react-icons/si'
+import Favicon from './assets/favicon.ico'
+import ProfilePictureOriginal from './assets/images/akula-arius.jpg'
+import ProfilePictureAvif from './assets/images/akula-arius.jpg?format=avif'
+import ProfilePictureJpeg from './assets/images/akula-arius.jpg?format=jpeg'
+import ProfilePicturePng from './assets/images/akula-arius.jpg?format=png'
+import ProfilePictureWebp from './assets/images/akula-arius.jpg?format=webp'
 import { ProfileNameStandout, ProfilePictureSources } from './components/display/header'
 import { Description, DescriptionTitle, ExternalLink, Paragraph } from './components/typography'
 import PanelBackground from './assets/images/blueprint-panels.svg'
@@ -23,6 +22,7 @@ import { Row } from './components/layout'
 export const PANEL_BACKGROUND = PanelBackground
 export const FOOTER_BACKGROUND = FooterBackground
 export const PAGE_BACKGROUND = PageBackground
+export const FAVICON = Favicon
 
 export const PROFILE_PICTURE: ProfilePictureSources = {
     src: ProfilePictureOriginal,
@@ -35,31 +35,32 @@ export const PROFILE_PICTURE: ProfilePictureSources = {
 export const PROFILE_NAME = (
     <>
         {/* amphi[ne]ko */}
-        amphi
         <ProfileNameStandout
             backgroundColor="hsla(0, 100%, 82%, 0.25)"
-            href="https://en.wikipedia.org/wiki/Neon"
-            hoverRuby="ね"
-            hoverColor="hsla(0, 100%, 82%, 0.75)"
+            href="https://en.wikipedia.org/wiki/Shark"
+            hoverRuby="🦈"
+            hoverColor="hsla(0, 35%, 57%, 0.75)"
             ruby="10"
         >
-            ne
+            Akula
         </ProfileNameStandout>
-        ko
+        <wbr /> Arius
     </>
 )
+
+export const PROFILE_TITLE = 'Akula Arius'
 
 export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
     {
         title: 'also-known-as',
         tags: [
             {
-                tag: 'atomic-akarin',
-                comment: 'since 201?',
+                tag: '雪野時雨',
+                comment: 'OC',
             },
             {
-                tag: '1kar0s',
-                comment: 'since 202?',
+                tag: 'PhotonSPK',
+                comment: '2020',
             },
         ],
     },
@@ -67,11 +68,11 @@ export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
         title: 'area-of-work',
         tags: [
             {
-                tag: 'neteng',
-                icon: <TbNetwork />,
+                tag: 'EE',
+                icon: <TbCpu />,
             },
             {
-                tag: 'swe',
+                tag: 'SWE',
                 icon: <TbSourceCode />,
             },
         ],
@@ -80,14 +81,11 @@ export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
         title: 'languages',
         tags: [
             {
-                tag: 'zh-cmn-Hans',
+                tag: 'zh-CN',
                 comment: 'native',
             },
             {
-                tag: 'en-GB',
-            },
-            {
-                tag: 'en-US',
+                tag: 'en-CA',
             },
             {
                 tag: 'ja',
@@ -103,8 +101,8 @@ export const ACCOUNTS: Accounts[] = [
         accounts: [
             {
                 platform: 'GitHub',
-                name: 'amphineko',
-                url: 'https://github.com/amphineko/',
+                name: 'Akula Arius',
+                url: 'https://github.com/PhotonSPK/',
                 icon: <TbBrandGithub />,
                 iconBackground: '#000000',
             },
@@ -114,25 +112,11 @@ export const ACCOUNTS: Accounts[] = [
         type: 'social-accounts',
         accounts: [
             {
-                platform: 'Telegram',
-                name: '@amphineko',
-                url: 'https://telegram.me/amphineko',
-                icon: <TbBrandTelegram />,
-                iconBackground: '#0088ccaa',
-            },
-            {
                 platform: 'Twitter',
-                name: '@amphineko',
-                url: 'https://twitter.com/amphineko/',
+                name: '@PhotonSPK',
+                url: 'https://x.com/PhotonSPK/',
                 icon: <TbBrandTwitter />,
                 iconBackground: '#1da1f2aa',
-            },
-            {
-                platform: 'Weibo',
-                name: 'redacted',
-                icon: <TbBrandWeibo />,
-                iconBackground: '#ff9933aa',
-                redacted: true,
             },
         ],
     },
@@ -140,25 +124,18 @@ export const ACCOUNTS: Accounts[] = [
         type: 'gaming',
         accounts: [
             {
-                platform: 'osu!',
-                name: 'Rukatan',
-                url: 'https://osu.ppy.sh/users/1344051',
-                icon: <TbCookie />,
-                iconBackground: '#f062a1aa',
-            },
-            {
                 platform: 'Steam',
-                name: '1kar0s',
-                url: 'https://steamcommunity.com/id/amphineko/',
+                name: 'Akula Arius',
+                url: 'https://steamcommunity.com/id/PhotonSPK/',
                 icon: <TbBrandSteam />,
                 iconBackground: '#000000aa',
             },
             {
-                platform: 'VATSIM',
-                name: 'N190AP',
-                url: 'https://stats.vatsim.net/stats/1499554',
-                icon: <TbBrandSteam />,
-                iconBackground: '#ff9933aa',
+                platform: 'VRChat',
+                name: 'Akula Arius',
+                url: 'https://vrchat.com/home/user/usr_8ceb03ff-3164-47c1-8368-469033a5bafa/',
+                icon: <SiVrchat />,
+                iconBackground: '#000000aa',
             },
         ],
     },
@@ -167,27 +144,22 @@ export const ACCOUNTS: Accounts[] = [
 export const DESCRIPTION_PARAGRAPHS = (
     <Row background={PANEL_BACKGROUND}>
         <Description>
-            <DescriptionTitle smallCaps>what am i doing?</DescriptionTitle>
-            <Paragraph>FAANG network enginner since 2022.</Paragraph>
-            <Paragraph>passionate full-stack software developer and open-source contributor.</Paragraph>
-            <Paragraph>amateur network engineer operating own Internet autonomous systems.</Paragraph>
+            <DescriptionTitle smallCaps>who i am?</DescriptionTitle>
+            <Paragraph>Amateur .NET Programmer, kemomimi holics.</Paragraph>
+            <Paragraph>Strive to become better every day.</Paragraph>
         </Description>
         <Description>
             <DescriptionTitle smallCaps>what do i love?</DescriptionTitle>
-            <Paragraph>ardently love of FPS, simulation and AVG.</Paragraph>
-            <Paragraph>rhythm game is LIFE!</Paragraph>
+            <Paragraph>FPS games like Battlefield.</Paragraph>
             <Paragraph>
-                retired and mission-collection only{' '}
-                <ExternalLink href="https://en.wikipedia.org/wiki/Ingress_(video_game)">Ingress</ExternalLink> agent.
+                Also a huge fan of RTS games. <del>Althought I'm not good at that</del>
             </Paragraph>
-            <Paragraph>
-                <del className="deleted">dreamed to be a civil aviation pilot.</del>
-            </Paragraph>
+            <Paragraph>Love playing rhythm games like Arcaea and Maimai.</Paragraph>
         </Description>
     </Row>
 )
 
-export const COPYRIGHT = 'Copyright © 2015-2024 amphineko. Illustrations have their own licenses.'
+export const COPYRIGHT = 'Copyright © 2025 Akula Arius. Illustrations have their own licenses.'
 
 interface Account {
     platform: string

@@ -192,7 +192,9 @@ const ProfilePicture = ({ avif, jpeg, png, webp }: ProfilePictureSources) => (
 export const Header = ({
     background,
     children,
+    favicon,
     profileName,
+    profileTitle,
     profilePicture,
 }: PropsWithChildren<{
     background?: string
@@ -200,6 +202,8 @@ export const Header = ({
     profilePicture: ProfilePictureSources
 }>) => (
     <header className="header row">
+        <title>{profileTitle}</title>
+        <link rel="icon" href={favicon} />
         <div className="column column-picture">
             <a className="picture-container" href={profilePicture.src}>
                 <ProfilePicture {...profilePicture} />
