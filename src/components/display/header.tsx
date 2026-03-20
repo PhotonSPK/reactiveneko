@@ -232,6 +232,7 @@ export const Header = ({
                 display: flex;
                 flex-direction: column;
                 gap: 2em;
+                opacity: 0.9;
             }
 
             .column-picture {

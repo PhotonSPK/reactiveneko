@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import type { IconType } from 'react-icons'
 import { TbBulb, TbGitBranch } from 'react-icons/tb'
-import Background from './assets/images/blueprint-bg.svg'
+import Background from './assets/images/background.webp'
 import { AccountShowcase } from './components/display/accounts.tsx'
 import { Capsule } from './components/display/capsule'
 import { Footer, FooterLink, FooterParagraph } from './components/display/footer'
@@ -11,7 +11,6 @@ import {
     ACCOUNTS,
     COPYRIGHT,
     DESCRIPTION_PARAGRAPHS,
-    PANEL_BACKGROUND,
     FAVICON,
     PROFILE_NAME,
     PROFILE_TITLE,
@@ -64,7 +63,7 @@ function ProfileLabel({ children, comment, icon }: { children: string; comment?:
 export const IndexPage = () => {
     return (
         <div className="container">
-            <Header background={PANEL_BACKGROUND} favicon={FAVICON} profilePicture={PROFILE_PICTURE} profileName={PROFILE_NAME} profileTitle={PROFILE_TITLE}>
+            <Header favicon={FAVICON} profilePicture={PROFILE_PICTURE} profileName={PROFILE_NAME} profileTitle={PROFILE_TITLE}>
                 <ProfileAddons>
                     {PROFILE_TAGS.map(({ tags, title }) => (
                         <ProfileAddonGroup key={title} title={title}>
@@ -78,7 +77,7 @@ export const IndexPage = () => {
                 </ProfileAddons>
             </Header>
 
-            <AccountShowcase.Container background={PANEL_BACKGROUND}>
+            <AccountShowcase.Container >
                 {ACCOUNTS.map((category) => (
                     <AccountShowcase.Category key={category.type} title={category.type}>
                         {category.accounts.map(({ icon, iconBackground, name, platform, redacted, url }) => (

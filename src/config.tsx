@@ -1,9 +1,10 @@
 import {
     TbBrandGithub,
     TbBrandSteam,
-    TbBrandTwitter,
+    TbBrandX,
     TbCpu,
     TbSourceCode,
+    TbAssembly,
 } from 'react-icons/tb'
 import { SiVrchat } from 'react-icons/si'
 import Favicon from './assets/favicon.ico'
@@ -37,8 +38,8 @@ export const PROFILE_NAME = (
         {/* amphi[ne]ko */}
         <ProfileNameStandout
             backgroundColor="hsla(0, 100%, 82%, 0.25)"
-            href="https://en.wikipedia.org/wiki/Shark"
-            hoverRuby="🦈"
+            href="https://en.wikipedia.org/wiki/Kamov_Ka-50"
+            hoverRuby="🚁"
             hoverColor="hsla(0, 35%, 57%, 0.75)"
             ruby="10"
         >
@@ -55,7 +56,7 @@ export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
         title: 'also-known-as',
         tags: [
             {
-                tag: '雪野時雨',
+                tag: '雪野シグレ',
                 comment: 'OC',
             },
             {
@@ -67,6 +68,10 @@ export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
     {
         title: 'area-of-work',
         tags: [
+            {
+                tag: 'MFG',
+                icon: <TbAssembly />,
+            },
             {
                 tag: 'EE',
                 icon: <TbCpu />,
@@ -85,7 +90,8 @@ export const PROFILE_TAGS: ProfileHeaderTagGroup[] = [
                 comment: 'native',
             },
             {
-                tag: 'en-CA',
+                tag: 'en-US',
+                comment: 'CET-6',
             },
             {
                 tag: 'ja',
@@ -115,8 +121,8 @@ export const ACCOUNTS: Accounts[] = [
                 platform: 'Twitter',
                 name: '@PhotonSPK',
                 url: 'https://x.com/PhotonSPK/',
-                icon: <TbBrandTwitter />,
-                iconBackground: '#1da1f2aa',
+                icon: <TbBrandX />,
+                iconBackground: '#000000',
             },
         ],
     },
@@ -125,7 +131,7 @@ export const ACCOUNTS: Accounts[] = [
         accounts: [
             {
                 platform: 'Steam',
-                name: 'Akula Arius',
+                name: 'AkulaQWQ',
                 url: 'https://steamcommunity.com/id/PhotonSPK/',
                 icon: <TbBrandSteam />,
                 iconBackground: '#000000aa',
@@ -142,24 +148,21 @@ export const ACCOUNTS: Accounts[] = [
 ]
 
 export const DESCRIPTION_PARAGRAPHS = (
-    <Row background={PANEL_BACKGROUND}>
+    <Row>
         <Description>
             <DescriptionTitle smallCaps>who i am?</DescriptionTitle>
             <Paragraph>Amateur .NET Programmer, kemomimi holics.</Paragraph>
-            <Paragraph>Strive to become better every day.</Paragraph>
+            <Paragraph>Mental instability. Strive to become better every day.</Paragraph>
         </Description>
         <Description>
             <DescriptionTitle smallCaps>what do i love?</DescriptionTitle>
-            <Paragraph>FPS games like Battlefield.</Paragraph>
-            <Paragraph>
-                Also a huge fan of RTS games. <del>Althought I'm not good at that</del>
-            </Paragraph>
-            <Paragraph>Love playing rhythm games like Arcaea and Maimai.</Paragraph>
+            <Paragraph>War-themed games lover.</Paragraph>
+            <Paragraph>Used to play rhythm games.</Paragraph>
         </Description>
     </Row>
 )
 
-export const COPYRIGHT = 'Copyright © 2025 Akula Arius. Illustrations have their own licenses.'
+export const COPYRIGHT = 'Copyright © 2026 Akula Arius. Illustrations have their own rights.'
 
 interface Account {
     platform: string
